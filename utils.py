@@ -13,7 +13,7 @@ def predict(
     height_cm,
     age,
 ):
-    model = joblib.load(r"C:\Users\Tash-tech\OneDrive - Nelson Mandela University\Documents\FIFA\XGBoost.pkl")
+    model = joblib.load(r"https://github.com/tadiwamark/OverallScorePrediction/blob/main/XGBoost.pkl")
 
     test_data = [[
         joined,
