@@ -9,6 +9,7 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 'xgboost'])
 
 import joblib
+import pickle
 
 
 def predict(
@@ -23,7 +24,9 @@ def predict(
     height_cm,
     age,
 ):
-    model = joblib.load(r"XGBoost.pkl")
+    #model = joblib.load(r"XGBoost.pkl")
+    pickle_in = open('XGBoost.pkl', 'rb')
+classifier = pickle.load(pickle_in)
 
     test_data = [[
         joined,
@@ -37,7 +40,7 @@ def predict(
         height_cm,
         age,
     ]]
-    pred = model.predict(test_data)
+    pred = classifier.predict(test_data)
     return pred
 
 
