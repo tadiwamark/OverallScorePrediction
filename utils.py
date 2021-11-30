@@ -5,6 +5,9 @@ import subprocess
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
 'joblib'])
 
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+'xgboost'])
+
 import joblib
 
 
