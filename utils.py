@@ -26,9 +26,9 @@ def predict(
 ):
     #model = joblib.load(r"XGBoost.pkl")
     pickle_in = open('XGBoost.pkl', 'rb')
-classifier = pickle.load(pickle_in)
-
-    test_data = [[
+    classifier = pickle.load(pickle_in)
+    
+test_data = [[
         joined,
         power_jumping,
         power_stamping,
@@ -40,8 +40,9 @@ classifier = pickle.load(pickle_in)
         height_cm,
         age,
     ]]
-    pred = classifier.predict(test_data)
-    return pred
+
+pred = classifier.predict(test_data)
+return pred
 
 
 predict(45, 25, 12, 25, 12, 12, 15, 25, 25, 12)
