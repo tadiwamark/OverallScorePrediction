@@ -20,7 +20,7 @@ def predict(
     height_cm,
     age,
 ):
-    model = joblib.load(r"https://github.com/tadiwamark/OverallScorePrediction/blob/main/XGBoost.pkl")
+    model = joblib.load(r"XGBoost.pkl")
 
     test_data = [[
         joined,
